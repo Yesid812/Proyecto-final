@@ -1,0 +1,1817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto final arquitectura computacional.: Referencia del archivo Sketch.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto final arquitectura computacional.<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Máquina de estados finitos para el control de temperaturas.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Sketch.ino</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Un programa que utiliza una maquna de estados finito, juntos con funciones asíncronicas para detectar cambios en la temperatura y emitir alertas.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;StateMachineLib.h&quot;</code><br />
+<code>#include &quot;AsyncTaskLib.h&quot;</code><br />
+<code>#include &lt;Keypad.h&gt;</code><br />
+<code>#include &lt;LiquidCrystal.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ab435487e41a1d42d4379464e35f873b4" id="r_ab435487e41a1d42d4379464e35f873b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ab435487e41a1d42d4379464e35f873b4">red</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:ab435487e41a1d42d4379464e35f873b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin para el LED rojo.  <br /></td></tr>
+<tr class="separator:ab435487e41a1d42d4379464e35f873b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7027592d032f7d20b38a1304ae3da2a2" id="r_a7027592d032f7d20b38a1304ae3da2a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a7027592d032f7d20b38a1304ae3da2a2">green</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a7027592d032f7d20b38a1304ae3da2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del Pin para el LED verde.  <br /></td></tr>
+<tr class="separator:a7027592d032f7d20b38a1304ae3da2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679c8f05bd397c3b2ad08274a1e5e752" id="r_a679c8f05bd397c3b2ad08274a1e5e752"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a679c8f05bd397c3b2ad08274a1e5e752">blue</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a679c8f05bd397c3b2ad08274a1e5e752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del Pin para el LED azul.  <br /></td></tr>
+<tr class="separator:a679c8f05bd397c3b2ad08274a1e5e752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b4fe45622d5b33767ead7735f354c4" id="r_a40b4fe45622d5b33767ead7735f354c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a40b4fe45622d5b33767ead7735f354c4">beta</a>&#160;&#160;&#160;4090</td></tr>
+<tr class="memdesc:a40b4fe45622d5b33767ead7735f354c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de beta del termistor.  <br /></td></tr>
+<tr class="separator:a40b4fe45622d5b33767ead7735f354c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce3f00008e9906b1e95be78df170b7b" id="r_a2ce3f00008e9906b1e95be78df170b7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a2ce3f00008e9906b1e95be78df170b7b">resistance</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a2ce3f00008e9906b1e95be78df170b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de la resistencia de pull-down.  <br /></td></tr>
+<tr class="separator:a2ce3f00008e9906b1e95be78df170b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae063708dcb4d38cf311edf254f63e333" id="r_ae063708dcb4d38cf311edf254f63e333"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ae063708dcb4d38cf311edf254f63e333">buzzer</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:ae063708dcb4d38cf311edf254f63e333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de la constante del buzzer establecido en 7.  <br /></td></tr>
+<tr class="separator:ae063708dcb4d38cf311edf254f63e333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8" id="r_a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { <br />
+&#160;&#160;<a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8a1ff76aa808bb8209a13fcdbaf330587e">Init</a> = 0
+, <a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b">Bloqueado</a> = 1
+, <a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8a5c81f9f2ae50d275440783bc6d4dddbf">MonitorLuz</a> = 2
+, <a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8a7b0e17dad7ee3f1add6ae740b0ede650">MonitorTemperatura</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8ac877dff4f49e9f1b26d4f38aab892ca5">AlertaLed</a> = 4
+, <a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8a8488dd08da90b462794dcdbbc423dabf">AlertaBuzzer</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeración que representa los estados de la máquina de estados.  <a href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8">Más...</a><br /></td></tr>
+<tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080a822f0093973313bd644e517a5090" id="r_a080a822f0093973313bd644e517a5090"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090">Input</a> { <br />
+&#160;&#160;<a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4">SistemaBloqueado</a> = 0
+, <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d">ClaveCorrecta</a> = 1
+, <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a2992a816cfec039e461be8a998c52366">LuzMenor40</a> = 2
+, <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a524032f305a922339b0bda289b939a4d">TemperaturaMayor30</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a4709aff281a5471096fd9dc9418c22a8">TimeOut</a> = 4
+, <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">Unknown</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:a080a822f0093973313bd644e517a5090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeración que representa las entradas de la máquina de estados.  <a href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090">Más...</a><br /></td></tr>
+<tr class="separator:a080a822f0093973313bd644e517a5090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a817f6545bce2c289122706845ed0894c" id="r_a817f6545bce2c289122706845ed0894c"><td class="memItemLeft" align="right" valign="top">LiquidCrystal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a817f6545bce2c289122706845ed0894c">lcd</a> (<a class="el" href="_sketch_8ino.html#a6e17894d69614d24591844d4d934dd24">rs</a>, <a class="el" href="_sketch_8ino.html#a41ca0f2ba69e4a0dc418933afda4ee05">en</a>, <a class="el" href="_sketch_8ino.html#a8e27f8b906cf9f57c1124234c459792e">d4</a>, <a class="el" href="_sketch_8ino.html#ad52d32e739245fa26d6cb728bbf31dd0">d5</a>, <a class="el" href="_sketch_8ino.html#ad1022e721e1fa576ed67afb73831ed70">d6</a>, <a class="el" href="_sketch_8ino.html#a7ce0880460ab9afdbb59e308d6f93e04">d7</a>)</td></tr>
+<tr class="memdesc:a817f6545bce2c289122706845ed0894c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creación de un objeto de tipo LiquidCrystal para la pantalla LCD.  <br /></td></tr>
+<tr class="separator:a817f6545bce2c289122706845ed0894c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a08449a5de39ffcf74503a4a9135185" id="r_a5a08449a5de39ffcf74503a4a9135185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a> (void)</td></tr>
+<tr class="memdesc:a5a08449a5de39ffcf74503a4a9135185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que se llama cuando se produce un tiempo de espera (timeout).  <br /></td></tr>
+<tr class="separator:a5a08449a5de39ffcf74503a4a9135185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d701b4b585b5dc07cb47bd49fc8790" id="r_aa1d701b4b585b5dc07cb47bd49fc8790"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#aa1d701b4b585b5dc07cb47bd49fc8790">esperar3s</a> (3000, false, <a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>)</td></tr>
+<tr class="memdesc:aa1d701b4b585b5dc07cb47bd49fc8790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para esperar 3 segundos.  <br /></td></tr>
+<tr class="separator:aa1d701b4b585b5dc07cb47bd49fc8790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639bd1e4c7064f1aa1683c9be34f1626" id="r_a639bd1e4c7064f1aa1683c9be34f1626"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a639bd1e4c7064f1aa1683c9be34f1626">esperar4s</a> (4000, false, <a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>)</td></tr>
+<tr class="memdesc:a639bd1e4c7064f1aa1683c9be34f1626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para esperar 4 segundos.  <br /></td></tr>
+<tr class="separator:a639bd1e4c7064f1aa1683c9be34f1626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49f4d5e94b07d383c59284df72fd61f8" id="r_a49f4d5e94b07d383c59284df72fd61f8"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a49f4d5e94b07d383c59284df72fd61f8">esperar5s</a> (5000, false, <a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>)</td></tr>
+<tr class="memdesc:a49f4d5e94b07d383c59284df72fd61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para esperar 5 segundos.  <br /></td></tr>
+<tr class="separator:a49f4d5e94b07d383c59284df72fd61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b64f00c2dd7d9b84e10923c24f65983" id="r_a5b64f00c2dd7d9b84e10923c24f65983"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a5b64f00c2dd7d9b84e10923c24f65983">esperar6s</a> (6000, false, <a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>)</td></tr>
+<tr class="memdesc:a5b64f00c2dd7d9b84e10923c24f65983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para esperar 6 segundos.  <br /></td></tr>
+<tr class="separator:a5b64f00c2dd7d9b84e10923c24f65983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd246445d3c7b140a713174fed6b7e87" id="r_afd246445d3c7b140a713174fed6b7e87"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#afd246445d3c7b140a713174fed6b7e87">esperar10s</a> (10000, false, <a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>)</td></tr>
+<tr class="memdesc:afd246445d3c7b140a713174fed6b7e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para esperar 10 segundos.  <br /></td></tr>
+<tr class="separator:afd246445d3c7b140a713174fed6b7e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c808757b6d13af79a1091d9e6a6e2a" id="r_a05c808757b6d13af79a1091d9e6a6e2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a05c808757b6d13af79a1091d9e6a6e2a">sistemaDeSeguridad</a> (void)</td></tr>
+<tr class="memdesc:a05c808757b6d13af79a1091d9e6a6e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función encargada de gestionar el sistema de seguridad.  <br /></td></tr>
+<tr class="separator:a05c808757b6d13af79a1091d9e6a6e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a9f6b83069ea8e99153bacecc0e128" id="r_ab3a9f6b83069ea8e99153bacecc0e128"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ab3a9f6b83069ea8e99153bacecc0e128">taskSistemaDeSeguridad</a> (0, true, <a class="el" href="_sketch_8ino.html#a05c808757b6d13af79a1091d9e6a6e2a">sistemaDeSeguridad</a>)</td></tr>
+<tr class="memdesc:ab3a9f6b83069ea8e99153bacecc0e128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para el sistema de seguridad.  <br /></td></tr>
+<tr class="separator:ab3a9f6b83069ea8e99153bacecc0e128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27a7bf75ed1934f505a7751d5a0d5dd" id="r_ab27a7bf75ed1934f505a7751d5a0d5dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ab27a7bf75ed1934f505a7751d5a0d5dd">bloqueo</a> (void)</td></tr>
+<tr class="memdesc:ab27a7bf75ed1934f505a7751d5a0d5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para gestionar el bloqueo del sistema.  <br /></td></tr>
+<tr class="separator:ab27a7bf75ed1934f505a7751d5a0d5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61bfd1072f04a16ffe5f00761e86dfd2" id="r_a61bfd1072f04a16ffe5f00761e86dfd2"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a61bfd1072f04a16ffe5f00761e86dfd2">taskBloqueo</a> (0, false, <a class="el" href="_sketch_8ino.html#ab27a7bf75ed1934f505a7751d5a0d5dd">bloqueo</a>)</td></tr>
+<tr class="memdesc:a61bfd1072f04a16ffe5f00761e86dfd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para el bloqueo del sistema.  <br /></td></tr>
+<tr class="separator:a61bfd1072f04a16ffe5f00761e86dfd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59984e8ef9cfcf8b5e30dc838fcb27cc" id="r_a59984e8ef9cfcf8b5e30dc838fcb27cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a59984e8ef9cfcf8b5e30dc838fcb27cc">monitorLuz</a> (void)</td></tr>
+<tr class="memdesc:a59984e8ef9cfcf8b5e30dc838fcb27cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para monitorear la intensidad de luz.  <br /></td></tr>
+<tr class="separator:a59984e8ef9cfcf8b5e30dc838fcb27cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb86d62c5c503c3420f79f44a9e0b17d" id="r_adb86d62c5c503c3420f79f44a9e0b17d"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#adb86d62c5c503c3420f79f44a9e0b17d">taskMonitorLuz</a> (500, true, <a class="el" href="_sketch_8ino.html#a59984e8ef9cfcf8b5e30dc838fcb27cc">monitorLuz</a>)</td></tr>
+<tr class="memdesc:adb86d62c5c503c3420f79f44a9e0b17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para el monitoreo de la luz.  <br /></td></tr>
+<tr class="separator:adb86d62c5c503c3420f79f44a9e0b17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8387fe03b227668508a34c2966114c" id="r_abf8387fe03b227668508a34c2966114c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#abf8387fe03b227668508a34c2966114c">monitorTemperatura</a> (void)</td></tr>
+<tr class="memdesc:abf8387fe03b227668508a34c2966114c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para monitorear la temperatura.  <br /></td></tr>
+<tr class="separator:abf8387fe03b227668508a34c2966114c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab46383933c609330db21fc639d2c5b1" id="r_aab46383933c609330db21fc639d2c5b1"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#aab46383933c609330db21fc639d2c5b1">taskMonitorTemperatura</a> (500, true, <a class="el" href="_sketch_8ino.html#abf8387fe03b227668508a34c2966114c">monitorTemperatura</a>)</td></tr>
+<tr class="memdesc:aab46383933c609330db21fc639d2c5b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para el monitoreo de la temperatura.  <br /></td></tr>
+<tr class="separator:aab46383933c609330db21fc639d2c5b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f61a9173ce6d71e3cbcb30092f85bf9" id="r_a5f61a9173ce6d71e3cbcb30092f85bf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a5f61a9173ce6d71e3cbcb30092f85bf9">alertaAltaLuz</a> (void)</td></tr>
+<tr class="memdesc:a5f61a9173ce6d71e3cbcb30092f85bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para manejar alertas de alta intensidad de luz.  <br /></td></tr>
+<tr class="separator:a5f61a9173ce6d71e3cbcb30092f85bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7ac0c696440f345f95ab272c4d0268" id="r_abd7ac0c696440f345f95ab272c4d0268"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#abd7ac0c696440f345f95ab272c4d0268">taskAlertaBajaLuz</a> (0, true, <a class="el" href="_sketch_8ino.html#a5f61a9173ce6d71e3cbcb30092f85bf9">alertaAltaLuz</a>)</td></tr>
+<tr class="memdesc:abd7ac0c696440f345f95ab272c4d0268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para alertas de baja intensidad de luz.  <br /></td></tr>
+<tr class="separator:abd7ac0c696440f345f95ab272c4d0268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa863eeaea0f80ae02528df93e4d4cbe1" id="r_aa863eeaea0f80ae02528df93e4d4cbe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#aa863eeaea0f80ae02528df93e4d4cbe1">alertaAltaTemperatura</a> (void)</td></tr>
+<tr class="memdesc:aa863eeaea0f80ae02528df93e4d4cbe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función para manejar alertas de alta temperatura.  <br /></td></tr>
+<tr class="separator:aa863eeaea0f80ae02528df93e4d4cbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eef11a29e27af65cb90333dfe9f7828" id="r_a3eef11a29e27af65cb90333dfe9f7828"><td class="memItemLeft" align="right" valign="top">AsyncTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a3eef11a29e27af65cb90333dfe9f7828">taskAlertaAltaTemperatura</a> (0, true, <a class="el" href="_sketch_8ino.html#aa863eeaea0f80ae02528df93e4d4cbe1">alertaAltaTemperatura</a>)</td></tr>
+<tr class="memdesc:a3eef11a29e27af65cb90333dfe9f7828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tarea asincrónica para alertas de alta temperatura.  <br /></td></tr>
+<tr class="separator:a3eef11a29e27af65cb90333dfe9f7828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35928f6af965b79cb14e9cbd4d9244b4" id="r_a35928f6af965b79cb14e9cbd4d9244b4"><td class="memItemLeft" align="right" valign="top">StateMachine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a35928f6af965b79cb14e9cbd4d9244b4">stateMachine</a> (6, 10)</td></tr>
+<tr class="memdesc:a35928f6af965b79cb14e9cbd4d9244b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaracion de la máquina de estados finitos.  <br /></td></tr>
+<tr class="separator:a35928f6af965b79cb14e9cbd4d9244b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f66d65ae208fa0a707755d77441dd5f" id="r_a0f66d65ae208fa0a707755d77441dd5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a0f66d65ae208fa0a707755d77441dd5f">setupStateMachine</a> ()</td></tr>
+<tr class="memdesc:a0f66d65ae208fa0a707755d77441dd5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuración inicial de la máquina de estados.  <br /></td></tr>
+<tr class="separator:a0f66d65ae208fa0a707755d77441dd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuración inicial del programa al arrancar.  <br /></td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal que se ejecuta repetidamente.  <br /></td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a18907a3a90ced48526921390f1e0a" id="r_a28a18907a3a90ced48526921390f1e0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a28a18907a3a90ced48526921390f1e0a">outputInit</a> ()</td></tr>
+<tr class="memdesc:a28a18907a3a90ced48526921390f1e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de salida para el estado de inicialización.  <br /></td></tr>
+<tr class="separator:a28a18907a3a90ced48526921390f1e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3f3a0d185995b11f233ab3e4fe4a51" id="r_a4c3f3a0d185995b11f233ab3e4fe4a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a4c3f3a0d185995b11f233ab3e4fe4a51">outputBloqueado</a> ()</td></tr>
+<tr class="memdesc:a4c3f3a0d185995b11f233ab3e4fe4a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de salida para el estado bloqueado.  <br /></td></tr>
+<tr class="separator:a4c3f3a0d185995b11f233ab3e4fe4a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac958cda8fb1f5950a452c1e3e10614a5" id="r_ac958cda8fb1f5950a452c1e3e10614a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ac958cda8fb1f5950a452c1e3e10614a5">outputMonitorLuz</a> ()</td></tr>
+<tr class="memdesc:ac958cda8fb1f5950a452c1e3e10614a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de salida para el estado de monitoreo de luz.  <br /></td></tr>
+<tr class="separator:ac958cda8fb1f5950a452c1e3e10614a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd81f444c86aa14ae36994083dac39b" id="r_a7cd81f444c86aa14ae36994083dac39b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a7cd81f444c86aa14ae36994083dac39b">outputMonitorTemperatura</a> ()</td></tr>
+<tr class="memdesc:a7cd81f444c86aa14ae36994083dac39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de salida para el estado de monitoreo de temperatura.  <br /></td></tr>
+<tr class="separator:a7cd81f444c86aa14ae36994083dac39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8974258e4cdb126c8366d42c131cf11a" id="r_a8974258e4cdb126c8366d42c131cf11a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a8974258e4cdb126c8366d42c131cf11a">outputAlertaLed</a> ()</td></tr>
+<tr class="memdesc:a8974258e4cdb126c8366d42c131cf11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de salida para el estado de alerta LED.  <br /></td></tr>
+<tr class="separator:a8974258e4cdb126c8366d42c131cf11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85ed5f512e5394ce3c3b516f3883096" id="r_af85ed5f512e5394ce3c3b516f3883096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#af85ed5f512e5394ce3c3b516f3883096">outputAlertaBuzzer</a> ()</td></tr>
+<tr class="memdesc:af85ed5f512e5394ce3c3b516f3883096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de salida para el estado de alerta Buzzer.  <br /></td></tr>
+<tr class="separator:af85ed5f512e5394ce3c3b516f3883096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6657be147bb61b78c65e7e506a92fa11" id="r_a6657be147bb61b78c65e7e506a92fa11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a6657be147bb61b78c65e7e506a92fa11">compararPalabras</a> (int longitud, char pal1[], char pal2[])</td></tr>
+<tr class="memdesc:a6657be147bb61b78c65e7e506a92fa11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dos arreglos de caracteres.  <br /></td></tr>
+<tr class="separator:a6657be147bb61b78c65e7e506a92fa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6e17894d69614d24591844d4d934dd24" id="r_a6e17894d69614d24591844d4d934dd24"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a6e17894d69614d24591844d4d934dd24">rs</a> = 12</td></tr>
+<tr class="memdesc:a6e17894d69614d24591844d4d934dd24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin rs.  <br /></td></tr>
+<tr class="separator:a6e17894d69614d24591844d4d934dd24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ca0f2ba69e4a0dc418933afda4ee05" id="r_a41ca0f2ba69e4a0dc418933afda4ee05"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a41ca0f2ba69e4a0dc418933afda4ee05">en</a> = 11</td></tr>
+<tr class="memdesc:a41ca0f2ba69e4a0dc418933afda4ee05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin en.  <br /></td></tr>
+<tr class="separator:a41ca0f2ba69e4a0dc418933afda4ee05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e27f8b906cf9f57c1124234c459792e" id="r_a8e27f8b906cf9f57c1124234c459792e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a8e27f8b906cf9f57c1124234c459792e">d4</a> = 5</td></tr>
+<tr class="memdesc:a8e27f8b906cf9f57c1124234c459792e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin d4.  <br /></td></tr>
+<tr class="separator:a8e27f8b906cf9f57c1124234c459792e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52d32e739245fa26d6cb728bbf31dd0" id="r_ad52d32e739245fa26d6cb728bbf31dd0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ad52d32e739245fa26d6cb728bbf31dd0">d5</a> = 4</td></tr>
+<tr class="memdesc:ad52d32e739245fa26d6cb728bbf31dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin d5.  <br /></td></tr>
+<tr class="separator:ad52d32e739245fa26d6cb728bbf31dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1022e721e1fa576ed67afb73831ed70" id="r_ad1022e721e1fa576ed67afb73831ed70"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ad1022e721e1fa576ed67afb73831ed70">d6</a> = 3</td></tr>
+<tr class="memdesc:ad1022e721e1fa576ed67afb73831ed70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin d6.  <br /></td></tr>
+<tr class="separator:ad1022e721e1fa576ed67afb73831ed70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce0880460ab9afdbb59e308d6f93e04" id="r_a7ce0880460ab9afdbb59e308d6f93e04"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a7ce0880460ab9afdbb59e308d6f93e04">d7</a> = 2</td></tr>
+<tr class="memdesc:a7ce0880460ab9afdbb59e308d6f93e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion del pin d4.  <br /></td></tr>
+<tr class="separator:a7ce0880460ab9afdbb59e308d6f93e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829655a147df70dd4cc94eae40a2204e" id="r_a829655a147df70dd4cc94eae40a2204e"><td class="memItemLeft" align="right" valign="top">const byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a> = 4</td></tr>
+<tr class="memdesc:a829655a147df70dd4cc94eae40a2204e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de constantes que representan el número de filas que tendrá el keypad.  <br /></td></tr>
+<tr class="separator:a829655a147df70dd4cc94eae40a2204e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd90f1160eaa105bc910d4d7c46b815" id="r_aefd90f1160eaa105bc910d4d7c46b815"><td class="memItemLeft" align="right" valign="top">const byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a> = 4</td></tr>
+<tr class="memdesc:aefd90f1160eaa105bc910d4d7c46b815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de constantes que representan el número de columnas que tendrá el keypad.  <br /></td></tr>
+<tr class="separator:aefd90f1160eaa105bc910d4d7c46b815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856e873a1d14012d57ddb813c4a1e40a" id="r_a856e873a1d14012d57ddb813c4a1e40a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a856e873a1d14012d57ddb813c4a1e40a">keys</a> [<a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a>][<a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a>]</td></tr>
+<tr class="memdesc:a856e873a1d14012d57ddb813c4a1e40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaracion de los caracteres que representan el teclado para el keypad.  <br /></td></tr>
+<tr class="separator:a856e873a1d14012d57ddb813c4a1e40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6753e0ae098b31e2f84d4024e361cf" id="r_a6d6753e0ae098b31e2f84d4024e361cf"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a6d6753e0ae098b31e2f84d4024e361cf">rowPins</a> [<a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a>] = { 24, 26, 28, 30 }</td></tr>
+<tr class="memdesc:a6d6753e0ae098b31e2f84d4024e361cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable de tipo byte que almacena el arreglo que representan los pines de las filas del keypad.  <br /></td></tr>
+<tr class="separator:a6d6753e0ae098b31e2f84d4024e361cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fece7b062124080e4b2976f9a8b675" id="r_aa9fece7b062124080e4b2976f9a8b675"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#aa9fece7b062124080e4b2976f9a8b675">colPins</a> [<a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a>] = { 32, 34, 36, 38 }</td></tr>
+<tr class="memdesc:aa9fece7b062124080e4b2976f9a8b675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable de tipo byte que almacena el arreglo que representan los pines de las columnas del keypad.  <br /></td></tr>
+<tr class="separator:aa9fece7b062124080e4b2976f9a8b675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6c3cc7e8c762ab0ca1fa2296d7bbfe" id="r_a0e6c3cc7e8c762ab0ca1fa2296d7bbfe"><td class="memItemLeft" align="right" valign="top">Keypad&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a0e6c3cc7e8c762ab0ca1fa2296d7bbfe">keypad</a> = Keypad(makeKeymap(<a class="el" href="_sketch_8ino.html#a856e873a1d14012d57ddb813c4a1e40a">keys</a>), <a class="el" href="_sketch_8ino.html#a6d6753e0ae098b31e2f84d4024e361cf">rowPins</a>, <a class="el" href="_sketch_8ino.html#aa9fece7b062124080e4b2976f9a8b675">colPins</a>, <a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a>, <a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a>)</td></tr>
+<tr class="memdesc:a0e6c3cc7e8c762ab0ca1fa2296d7bbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaración de un objeto de la clase Keypad.  <br /></td></tr>
+<tr class="separator:a0e6c3cc7e8c762ab0ca1fa2296d7bbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0a1b00c5b5bc7ec60b5cc784102225" id="r_a3f0a1b00c5b5bc7ec60b5cc784102225"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a3f0a1b00c5b5bc7ec60b5cc784102225">password</a> [4] = &quot;1234&quot;</td></tr>
+<tr class="memdesc:a3f0a1b00c5b5bc7ec60b5cc784102225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable que almacena la contraseña.  <br /></td></tr>
+<tr class="separator:a3f0a1b00c5b5bc7ec60b5cc784102225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbbd589497579fd40dd8a91611bc577" id="r_addbbd589497579fd40dd8a91611bc577"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#addbbd589497579fd40dd8a91611bc577">temp1</a> [4]</td></tr>
+<tr class="memdesc:addbbd589497579fd40dd8a91611bc577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable auxiliar temporal.  <br /></td></tr>
+<tr class="separator:addbbd589497579fd40dd8a91611bc577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd6e4144407ce602c4502d071a3583e" id="r_a0cd6e4144407ce602c4502d071a3583e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a0cd6e4144407ce602c4502d071a3583e">numChar</a> = 0</td></tr>
+<tr class="memdesc:a0cd6e4144407ce602c4502d071a3583e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable de timpo numChar inicializada en 0.  <br /></td></tr>
+<tr class="separator:a0cd6e4144407ce602c4502d071a3583e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab855909561fe5849851161bbc3bda199" id="r_ab855909561fe5849851161bbc3bda199"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#ab855909561fe5849851161bbc3bda199">attempts</a> = 0</td></tr>
+<tr class="memdesc:ab855909561fe5849851161bbc3bda199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable de tipo byte que almacena el número de intentos.  <br /></td></tr>
+<tr class="separator:ab855909561fe5849851161bbc3bda199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8450960731db3add8cee227018677825" id="r_a8450960731db3add8cee227018677825"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a8450960731db3add8cee227018677825">photocellPin</a> = A0</td></tr>
+<tr class="memdesc:a8450960731db3add8cee227018677825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable que almacena el pin del sensor photocellPin.  <br /></td></tr>
+<tr class="separator:a8450960731db3add8cee227018677825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd9f0d96c9cd0637798de3baa7aee60" id="r_a2cd9f0d96c9cd0637798de3baa7aee60"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a2cd9f0d96c9cd0637798de3baa7aee60">ledPin</a> = 13</td></tr>
+<tr class="memdesc:a2cd9f0d96c9cd0637798de3baa7aee60"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable que almacena el pin del sensor ledPin.  <br /></td></tr>
+<tr class="separator:a2cd9f0d96c9cd0637798de3baa7aee60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f256db0f0781e0dca84fa9e97f4834d" id="r_a4f256db0f0781e0dca84fa9e97f4834d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a4f256db0f0781e0dca84fa9e97f4834d">TemperaturePin</a> = A1</td></tr>
+<tr class="memdesc:a4f256db0f0781e0dca84fa9e97f4834d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable que almacena el pin de la temperatura.  <br /></td></tr>
+<tr class="separator:a4f256db0f0781e0dca84fa9e97f4834d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0563e10870312b52f7f25cfddf778db0" id="r_a0563e10870312b52f7f25cfddf778db0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090">Input</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sketch_8ino.html#a0563e10870312b52f7f25cfddf778db0">currentInput</a> = <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">Input::Unknown</a></td></tr>
+<tr class="memdesc:a0563e10870312b52f7f25cfddf778db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica la entrada actual para la máquina de estados.  <br /></td></tr>
+<tr class="separator:a0563e10870312b52f7f25cfddf778db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Un programa que utiliza una maquna de estados finito, juntos con funciones asíncronicas para detectar cambios en la temperatura y emitir alertas. </p>
+<dl class="section date"><dt>Fecha</dt><dd>2023-12-13 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Anderson Vinasco Giraldo <a href="#" onclick="location.href='mai'+'lto:'+'avi'+'na'+'sco'+'@u'+'nic'+'au'+'ca.'+'ed'+'u.c'+'o'; return false;">avina<span class="obfuscator">.nosp@m.</span>sco@<span class="obfuscator">.nosp@m.</span>unica<span class="obfuscator">.nosp@m.</span>uca.<span class="obfuscator">.nosp@m.</span>edu.c<span class="obfuscator">.nosp@m.</span>o</a> Duber Andres ErasoUni <a href="#" onclick="location.href='mai'+'lto:'+'dub'+'er'+'era'+'so'+'@un'+'ic'+'auc'+'a.'+'edu'+'.c'+'o'; return false;">duber<span class="obfuscator">.nosp@m.</span>eras<span class="obfuscator">.nosp@m.</span>o@uni<span class="obfuscator">.nosp@m.</span>cauc<span class="obfuscator">.nosp@m.</span>a.edu<span class="obfuscator">.nosp@m.</span>.co</a> Eider Yesid Obando <a href="#" onclick="location.href='mai'+'lto:'+'eyo'+'ba'+'ndo'+'@u'+'nic'+'au'+'ca.'+'ed'+'u.c'+'o'; return false;">eyoba<span class="obfuscator">.nosp@m.</span>ndo@<span class="obfuscator">.nosp@m.</span>unica<span class="obfuscator">.nosp@m.</span>uca.<span class="obfuscator">.nosp@m.</span>edu.c<span class="obfuscator">.nosp@m.</span>o</a> </dd></dl>
+<dl class="section user"><dt>Copyright</dt><dd>Information contained herein is proprietary to and constitutes valuable confidential trade secrets of Unicauca, and is subject to restrictions on use and disclosure.</dd></dl>
+<dl class="section user"><dt></dt><dd>Copyright (c) Unicauca 2023. All rights reserved.</dd></dl>
+<dl class="section user"><dt></dt><dd>The copyright notices above do not evidence any actual or intended publication of this material. </dd></dl>
+</div><h2 class="groupheader">Documentación de «define»</h2>
+<a id="a40b4fe45622d5b33767ead7735f354c4" name="a40b4fe45622d5b33767ead7735f354c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b4fe45622d5b33767ead7735f354c4">&#9670;&#160;</a></span>beta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define beta&#160;&#160;&#160;4090</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de beta del termistor. </p>
+<p>Este valor se utiliza en el cálculo de la temperatura en base a la resistencia del termistor. </p>
+
+</div>
+</div>
+<a id="a679c8f05bd397c3b2ad08274a1e5e752" name="a679c8f05bd397c3b2ad08274a1e5e752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679c8f05bd397c3b2ad08274a1e5e752">&#9670;&#160;</a></span>blue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define blue&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del Pin para el LED azul. </p>
+<ul>
+<li><code>Azul</code>: Pin 10 </li>
+</ul>
+
+</div>
+</div>
+<a id="ae063708dcb4d38cf311edf254f63e333" name="ae063708dcb4d38cf311edf254f63e333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae063708dcb4d38cf311edf254f63e333">&#9670;&#160;</a></span>buzzer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define buzzer&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion de la constante del buzzer establecido en 7. </p>
+
+</div>
+</div>
+<a id="a7027592d032f7d20b38a1304ae3da2a2" name="a7027592d032f7d20b38a1304ae3da2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7027592d032f7d20b38a1304ae3da2a2">&#9670;&#160;</a></span>green</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define green&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del Pin para el LED verde. </p>
+<ul>
+<li><code>Verde</code>: Pin 9 </li>
+</ul>
+
+</div>
+</div>
+<a id="ab435487e41a1d42d4379464e35f873b4" name="ab435487e41a1d42d4379464e35f873b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab435487e41a1d42d4379464e35f873b4">&#9670;&#160;</a></span>red</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define red&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin para el LED rojo. </p>
+<ul>
+<li><code>Rojo</code>: Pin 8 </li>
+</ul>
+
+</div>
+</div>
+<a id="a2ce3f00008e9906b1e95be78df170b7b" name="a2ce3f00008e9906b1e95be78df170b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce3f00008e9906b1e95be78df170b7b">&#9670;&#160;</a></span>resistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define resistance&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de la resistencia de pull-down. </p>
+<p>Este valor representa la resistencia de pull-down utilizada en el circuito. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="a080a822f0093973313bd644e517a5090" name="a080a822f0093973313bd644e517a5090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080a822f0093973313bd644e517a5090">&#9670;&#160;</a></span>Input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090">Input</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeración que representa las entradas de la máquina de estados. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4" name="a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4"></a>SistemaBloqueado&#160;</td><td class="fielddoc"><p>Entrada para indicar que el sistema está bloqueado. </p>
+<p>Esta entrada se utiliza cuando el sistema se encuentra en un estado bloqueado. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d" name="a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d"></a>ClaveCorrecta&#160;</td><td class="fielddoc"><p>Entrada para indicar que la clave ingresada es correcta. </p>
+<p>Esta entrada se utiliza cuando la clave ingresada coincide con la clave esperada. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a2992a816cfec039e461be8a998c52366" name="a080a822f0093973313bd644e517a5090a2992a816cfec039e461be8a998c52366"></a>LuzMenor40&#160;</td><td class="fielddoc"><p>Entrada para indicar que la luz es menor a 40 unidades. </p>
+<p>Esta entrada se utiliza cuando la intensidad de luz medida es menor a 40 unidades. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a524032f305a922339b0bda289b939a4d" name="a080a822f0093973313bd644e517a5090a524032f305a922339b0bda289b939a4d"></a>TemperaturaMayor30&#160;</td><td class="fielddoc"><p>Entrada para indicar que la temperatura es mayor a 30 grados Celsius. </p>
+<p>Esta entrada se utiliza cuando la temperatura medida es mayor a 30 grados Celsius. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a4709aff281a5471096fd9dc9418c22a8" name="a080a822f0093973313bd644e517a5090a4709aff281a5471096fd9dc9418c22a8"></a>TimeOut&#160;</td><td class="fielddoc"><p>Entrada para indicar que ha ocurrido un tiempo de espera (timeout). </p>
+<p>Esta entrada se utiliza cuando ha ocurrido un tiempo de espera en la máquina de estados. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb" name="a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb"></a>Unknown&#160;</td><td class="fielddoc"><p>Entrada desconocida. </p>
+<p>Esta entrada se utiliza cuando la entrada no se puede clasificar en ninguna categoría conocida. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5d74787dedbc4e11c1ab15bf487e61f8" name="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&#160;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_sketch_8ino.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeración que representa los estados de la máquina de estados. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a1ff76aa808bb8209a13fcdbaf330587e" name="a5d74787dedbc4e11c1ab15bf487e61f8a1ff76aa808bb8209a13fcdbaf330587e"></a>Init&#160;</td><td class="fielddoc"><p>Estado de inicialización. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b" name="a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b"></a>Bloqueado&#160;</td><td class="fielddoc"><p>Estado bloqueado. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a5c81f9f2ae50d275440783bc6d4dddbf" name="a5d74787dedbc4e11c1ab15bf487e61f8a5c81f9f2ae50d275440783bc6d4dddbf"></a>MonitorLuz&#160;</td><td class="fielddoc"><p>Estado de monitoreo de luz. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a7b0e17dad7ee3f1add6ae740b0ede650" name="a5d74787dedbc4e11c1ab15bf487e61f8a7b0e17dad7ee3f1add6ae740b0ede650"></a>MonitorTemperatura&#160;</td><td class="fielddoc"><p>Estado de monitoreo de temperatura. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ac877dff4f49e9f1b26d4f38aab892ca5" name="a5d74787dedbc4e11c1ab15bf487e61f8ac877dff4f49e9f1b26d4f38aab892ca5"></a>AlertaLed&#160;</td><td class="fielddoc"><p>Estado de alerta con LED. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a8488dd08da90b462794dcdbbc423dabf" name="a5d74787dedbc4e11c1ab15bf487e61f8a8488dd08da90b462794dcdbbc423dabf"></a>AlertaBuzzer&#160;</td><td class="fielddoc"><p>Estado de alerta con Buzzer. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a5f61a9173ce6d71e3cbcb30092f85bf9" name="a5f61a9173ce6d71e3cbcb30092f85bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f61a9173ce6d71e3cbcb30092f85bf9">&#9670;&#160;</a></span>alertaAltaLuz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alertaAltaLuz </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para manejar alertas de alta intensidad de luz. </p>
+<p>Esta función se llama para realizar acciones relacionadas con alertas de alta intensidad de luz, como activar señales de advertencia, mostrar mensajes, etc. </p><dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="aa863eeaea0f80ae02528df93e4d4cbe1" name="aa863eeaea0f80ae02528df93e4d4cbe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa863eeaea0f80ae02528df93e4d4cbe1">&#9670;&#160;</a></span>alertaAltaTemperatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alertaAltaTemperatura </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para manejar alertas de alta temperatura. </p>
+<p>Esta función se llama para realizar acciones relacionadas con alertas de alta temperatura, como activar señales de advertencia, mostrar mensajes, etc. </p><dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="ab27a7bf75ed1934f505a7751d5a0d5dd" name="ab27a7bf75ed1934f505a7751d5a0d5dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27a7bf75ed1934f505a7751d5a0d5dd">&#9670;&#160;</a></span>bloqueo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bloqueo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para gestionar el bloqueo del sistema. </p>
+<p>Esta función se llama para realizar acciones relacionadas con el bloqueo del sistema, como mostrar mensajes, activar señales de advertencia, etc. </p><dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="a6657be147bb61b78c65e7e506a92fa11" name="a6657be147bb61b78c65e7e506a92fa11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6657be147bb61b78c65e7e506a92fa11">&#9670;&#160;</a></span>compararPalabras()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool compararPalabras </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>longitud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pal1</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pal2</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compara dos arreglos de caracteres. </p>
+<p>Esta función compara dos arreglos de caracteres de longitud especificada.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">longitud</td><td>Longitud de los arreglos a comparar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pal1</td><td>Primer arreglo de caracteres. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pal2</td><td>Segundo arreglo de caracteres. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si los arreglos son iguales, false en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="afd246445d3c7b140a713174fed6b7e87" name="afd246445d3c7b140a713174fed6b7e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd246445d3c7b140a713174fed6b7e87">&#9670;&#160;</a></span>esperar10s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask esperar10s </td>
+          <td>(</td>
+          <td class="paramtype">10000&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para esperar 10 segundos. </p>
+<p>Esta tarea asincrónica se utiliza para programar una espera de 10 segundos antes de ejecutar la función <code>function_TimeOut</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">10000</td><td>Milisegundos de espera (10 segundos). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">false</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_TimeOut</td><td>Función que se ejecutará al completarse el tiempo de espera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1d701b4b585b5dc07cb47bd49fc8790" name="aa1d701b4b585b5dc07cb47bd49fc8790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d701b4b585b5dc07cb47bd49fc8790">&#9670;&#160;</a></span>esperar3s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask esperar3s </td>
+          <td>(</td>
+          <td class="paramtype">3000&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para esperar 3 segundos. </p>
+<p>Esta tarea asincrónica se utiliza para programar una espera de 3 segundos antes de ejecutar la función <code>function_TimeOut</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">3000</td><td>Milisegundos de espera (3 segundos). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">false</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_TimeOut</td><td>Función que se ejecutará al completarse el tiempo de espera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a639bd1e4c7064f1aa1683c9be34f1626" name="a639bd1e4c7064f1aa1683c9be34f1626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639bd1e4c7064f1aa1683c9be34f1626">&#9670;&#160;</a></span>esperar4s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask esperar4s </td>
+          <td>(</td>
+          <td class="paramtype">4000&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para esperar 4 segundos. </p>
+<p>Esta tarea asincrónica se utiliza para programar una espera de 4 segundos antes de ejecutar la función <code>function_TimeOut</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">4000</td><td>Milisegundos de espera (4 segundos). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">false</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_TimeOut</td><td>Función que se ejecutará al completarse el tiempo de espera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49f4d5e94b07d383c59284df72fd61f8" name="a49f4d5e94b07d383c59284df72fd61f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49f4d5e94b07d383c59284df72fd61f8">&#9670;&#160;</a></span>esperar5s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask esperar5s </td>
+          <td>(</td>
+          <td class="paramtype">5000&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para esperar 5 segundos. </p>
+<p>Esta tarea asincrónica se utiliza para programar una espera de 5 segundos antes de ejecutar la función <code>function_TimeOut</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">5000</td><td>Milisegundos de espera (5 segundos). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">false</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_TimeOut</td><td>Función que se ejecutará al completarse el tiempo de espera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b64f00c2dd7d9b84e10923c24f65983" name="a5b64f00c2dd7d9b84e10923c24f65983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b64f00c2dd7d9b84e10923c24f65983">&#9670;&#160;</a></span>esperar6s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask esperar6s </td>
+          <td>(</td>
+          <td class="paramtype">6000&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a5a08449a5de39ffcf74503a4a9135185">function_TimeOut</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para esperar 6 segundos. </p>
+<p>Esta tarea asincrónica se utiliza para programar una espera de 6 segundos antes de ejecutar la función <code>function_TimeOut</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">6000</td><td>Milisegundos de espera (6 segundos). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">false</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_TimeOut</td><td>Función que se ejecutará al completarse el tiempo de espera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a08449a5de39ffcf74503a4a9135185" name="a5a08449a5de39ffcf74503a4a9135185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a08449a5de39ffcf74503a4a9135185">&#9670;&#160;</a></span>function_TimeOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void function_TimeOut </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que se llama cuando se produce un tiempo de espera (timeout). </p>
+<p>Esta función puede ser utilizada como una devolución de llamada (callback). </p><dl class="section note"><dt>Nota</dt><dd>Asegúrate de ajustar el tiempo de espera en la tarea asíncrona o temporizador que utiliza esta función para que coincida con el comportamiento deseado.</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="a817f6545bce2c289122706845ed0894c" name="a817f6545bce2c289122706845ed0894c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a817f6545bce2c289122706845ed0894c">&#9670;&#160;</a></span>lcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LiquidCrystal lcd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a6e17894d69614d24591844d4d934dd24">rs</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a41ca0f2ba69e4a0dc418933afda4ee05">en</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a8e27f8b906cf9f57c1124234c459792e">d4</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#ad52d32e739245fa26d6cb728bbf31dd0">d5</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#ad1022e721e1fa576ed67afb73831ed70">d6</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a7ce0880460ab9afdbb59e308d6f93e04">d7</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creación de un objeto de tipo LiquidCrystal para la pantalla LCD. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rs</td><td>Pin de registro. </td></tr>
+    <tr><td class="paramname">en</td><td>Pin de habilitación. </td></tr>
+    <tr><td class="paramname">d4</td><td>Pin de datos. </td></tr>
+    <tr><td class="paramname">d5</td><td>Pin de datos. </td></tr>
+    <tr><td class="paramname">d6</td><td>Pin de datos. </td></tr>
+    <tr><td class="paramname">d7</td><td>Pin de datos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal que se ejecuta repetidamente. </p>
+<p>En cada iteración, esta función actualiza las tareas asíncronas y la máquina de estados. También reinicia la entrada actual de la máquina de estados a "Unknown". </p>
+
+</div>
+</div>
+<a id="a59984e8ef9cfcf8b5e30dc838fcb27cc" name="a59984e8ef9cfcf8b5e30dc838fcb27cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59984e8ef9cfcf8b5e30dc838fcb27cc">&#9670;&#160;</a></span>monitorLuz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorLuz </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para monitorear la intensidad de luz. </p>
+<p>Esta función se llama para medir y gestionar la intensidad de luz en el entorno. </p><dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="abf8387fe03b227668508a34c2966114c" name="abf8387fe03b227668508a34c2966114c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8387fe03b227668508a34c2966114c">&#9670;&#160;</a></span>monitorTemperatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorTemperatura </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función para monitorear la temperatura. </p>
+<p>Esta función se llama para medir y gestionar la temperatura en el entorno. </p><dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="af85ed5f512e5394ce3c3b516f3883096" name="af85ed5f512e5394ce3c3b516f3883096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85ed5f512e5394ce3c3b516f3883096">&#9670;&#160;</a></span>outputAlertaBuzzer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputAlertaBuzzer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de salida para el estado de alerta Buzzer. </p>
+<p>Esta función se llama al entrar en el estado de alerta Buzzer. Detiene las tareas de monitoreo de temperatura y alerta de alta temperatura, y luego inicia la tarea de alerta de alta temperatura con un temporizador de 5 segundos. </p>
+
+</div>
+</div>
+<a id="a8974258e4cdb126c8366d42c131cf11a" name="a8974258e4cdb126c8366d42c131cf11a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8974258e4cdb126c8366d42c131cf11a">&#9670;&#160;</a></span>outputAlertaLed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputAlertaLed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de salida para el estado de alerta LED. </p>
+<p>Esta función se llama al entrar en el estado de alerta LED. Detiene las tareas de monitoreo de luz y alerta de baja luz, y luego inicia la tarea de alerta de baja luz con un temporizador de 4 segundos. </p>
+
+</div>
+</div>
+<a id="a4c3f3a0d185995b11f233ab3e4fe4a51" name="a4c3f3a0d185995b11f233ab3e4fe4a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3f3a0d185995b11f233ab3e4fe4a51">&#9670;&#160;</a></span>outputBloqueado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputBloqueado </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de salida para el estado bloqueado. </p>
+<p>Esta función se llama al entrar en el estado bloqueado. Detiene las tareas de espera y sistema de seguridad, y luego inicia las tareas de bloqueo con un temporizador de 5 segundos. </p>
+
+</div>
+</div>
+<a id="a28a18907a3a90ced48526921390f1e0a" name="a28a18907a3a90ced48526921390f1e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a18907a3a90ced48526921390f1e0a">&#9670;&#160;</a></span>outputInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de salida para el estado de inicialización. </p>
+<p>Esta función se llama al entrar en el estado de inicialización. Realiza las acciones necesarias para configurar la interfaz de usuario, iniciar tareas y otros procesos asociados al inicio. </p>
+
+</div>
+</div>
+<a id="ac958cda8fb1f5950a452c1e3e10614a5" name="ac958cda8fb1f5950a452c1e3e10614a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac958cda8fb1f5950a452c1e3e10614a5">&#9670;&#160;</a></span>outputMonitorLuz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputMonitorLuz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de salida para el estado de monitoreo de luz. </p>
+<p>Esta función se llama al entrar en el estado de monitoreo de luz. Detiene las tareas de espera y sistema de seguridad, así como las tareas de monitoreo de temperatura y alerta de baja luz. Luego, inicia la tarea de monitoreo de luz con un temporizador de 3 segundos. </p>
+
+</div>
+</div>
+<a id="a7cd81f444c86aa14ae36994083dac39b" name="a7cd81f444c86aa14ae36994083dac39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd81f444c86aa14ae36994083dac39b">&#9670;&#160;</a></span>outputMonitorTemperatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputMonitorTemperatura </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de salida para el estado de monitoreo de temperatura. </p>
+<p>Esta función se llama al entrar en el estado de monitoreo de temperatura. Detiene las tareas de monitoreo de luz y alerta de alta temperatura, y luego inicia la tarea de monitoreo de temperatura con un temporizador de 6 segundos. </p>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuración inicial del programa al arrancar. </p>
+<p>Esta función realiza la inicialización de componentes y configuraciones esenciales al iniciar el programa, incluyendo la configuración del sistema de seguridad, el buzzer, y la configuración de la máquina de estados. </p>
+
+</div>
+</div>
+<a id="a0f66d65ae208fa0a707755d77441dd5f" name="a0f66d65ae208fa0a707755d77441dd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f66d65ae208fa0a707755d77441dd5f">&#9670;&#160;</a></span>setupStateMachine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setupStateMachine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuración inicial de la máquina de estados. </p>
+<p>Esta función se encarga de configurar la máquina de estados con sus transiciones y acciones asociadas a cada estado. Se definen las transiciones entre los estados y las funciones que se ejecutarán al entrar en cada estado. </p>
+
+</div>
+</div>
+<a id="a05c808757b6d13af79a1091d9e6a6e2a" name="a05c808757b6d13af79a1091d9e6a6e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c808757b6d13af79a1091d9e6a6e2a">&#9670;&#160;</a></span>sistemaDeSeguridad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sistemaDeSeguridad </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función encargada de gestionar el sistema de seguridad. </p>
+<p>Esta función se llama para manejar las operaciones relacionadas con el sistema de seguridad. Puede incluir la interacción con un teclado para ingresar claves, activar o desactivar alarmas, etc. </p><dl class="section return"><dt>Devuelve</dt><dd>Esta funcion no retorna ningún valor. </dd></dl>
+
+</div>
+</div>
+<a id="a35928f6af965b79cb14e9cbd4d9244b4" name="a35928f6af965b79cb14e9cbd4d9244b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35928f6af965b79cb14e9cbd4d9244b4">&#9670;&#160;</a></span>stateMachine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateMachine stateMachine </td>
+          <td>(</td>
+          <td class="paramtype">6&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">10&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declaracion de la máquina de estados finitos. </p>
+<p>Esta máquina de estados finitos se utiliza para controlar el flujo del programa en base a los diferentes estados y transiciones definidos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">6</td><td>Número total de estados en la máquina. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">10</td><td>Número máximo de transiciones que la máquina puede manejar simultáneamente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3eef11a29e27af65cb90333dfe9f7828" name="a3eef11a29e27af65cb90333dfe9f7828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eef11a29e27af65cb90333dfe9f7828">&#9670;&#160;</a></span>taskAlertaAltaTemperatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask taskAlertaAltaTemperatura </td>
+          <td>(</td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#aa863eeaea0f80ae02528df93e4d4cbe1">alertaAltaTemperatura</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para alertas de alta temperatura. </p>
+<p>Esta tarea asincrónica se configura para ejecutar la función <code>alertaAltaTemperatura</code> en respuesta a algún evento específico, pero no se repetirá automáticamente.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">0</td><td>No hay tiempo de espera inicial. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">true</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alertaAltaTemperatura</td><td>Función asociada a la tarea que se ejecutará. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd7ac0c696440f345f95ab272c4d0268" name="abd7ac0c696440f345f95ab272c4d0268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7ac0c696440f345f95ab272c4d0268">&#9670;&#160;</a></span>taskAlertaBajaLuz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask taskAlertaBajaLuz </td>
+          <td>(</td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a5f61a9173ce6d71e3cbcb30092f85bf9">alertaAltaLuz</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para alertas de baja intensidad de luz. </p>
+<p>Esta tarea asincrónica se configura para ejecutar la función <code>alertaAltaLuz</code> en respuesta a algún evento específico, pero no se repetirá automáticamente.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">0</td><td>No hay tiempo de espera inicial. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">true</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alertaAltaLuz</td><td>Función asociada a la tarea que se ejecutará. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61bfd1072f04a16ffe5f00761e86dfd2" name="a61bfd1072f04a16ffe5f00761e86dfd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61bfd1072f04a16ffe5f00761e86dfd2">&#9670;&#160;</a></span>taskBloqueo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask taskBloqueo </td>
+          <td>(</td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#ab27a7bf75ed1934f505a7751d5a0d5dd">bloqueo</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para el bloqueo del sistema. </p>
+<p>Esta tarea asincrónica se configura para ejecutar la función <code>bloqueo</code> en respuesta a algún evento específico, pero no se repetirá automáticamente.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">0</td><td>No hay tiempo de espera inicial. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">false</td><td>Indica que la tarea no se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bloqueo</td><td>Función asociada a la tarea que se ejecutará. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adb86d62c5c503c3420f79f44a9e0b17d" name="adb86d62c5c503c3420f79f44a9e0b17d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb86d62c5c503c3420f79f44a9e0b17d">&#9670;&#160;</a></span>taskMonitorLuz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask taskMonitorLuz </td>
+          <td>(</td>
+          <td class="paramtype">500&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a59984e8ef9cfcf8b5e30dc838fcb27cc">monitorLuz</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para el monitoreo de la luz. </p>
+<p>Esta tarea asincrónica se configura para ejecutar la función <code>monitorLuz</code> de forma periódica.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">500</td><td>Milisegundos de espera inicial antes de la primera ejecución. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">true</td><td>Indica que la tarea se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">monitorLuz</td><td>Función asociada a la tarea que se ejecutará. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab46383933c609330db21fc639d2c5b1" name="aab46383933c609330db21fc639d2c5b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab46383933c609330db21fc639d2c5b1">&#9670;&#160;</a></span>taskMonitorTemperatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask taskMonitorTemperatura </td>
+          <td>(</td>
+          <td class="paramtype">500&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#abf8387fe03b227668508a34c2966114c">monitorTemperatura</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para el monitoreo de la temperatura. </p>
+<p>Esta tarea asincrónica se configura para ejecutar la función <code>monitorTemperatura</code> de forma periódica.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">500</td><td>Milisegundos de espera inicial antes de la primera ejecución. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">true</td><td>Indica que la tarea se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">monitorTemperatura</td><td>Función asociada a la tarea que se ejecutará. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab3a9f6b83069ea8e99153bacecc0e128" name="ab3a9f6b83069ea8e99153bacecc0e128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a9f6b83069ea8e99153bacecc0e128">&#9670;&#160;</a></span>taskSistemaDeSeguridad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncTask taskSistemaDeSeguridad </td>
+          <td>(</td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sketch_8ino.html#a05c808757b6d13af79a1091d9e6a6e2a">sistemaDeSeguridad</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tarea asincrónica para el sistema de seguridad. </p>
+<p>Esta tarea asincrónica se configura para ejecutar la función <code>sistemaDeSeguridad</code> de forma periódica o en respuesta a algún evento específico.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">0</td><td>No hay tiempo de espera inicial. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">true</td><td>Indica que la tarea se ejecutará repetidamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sistemaDeSeguridad</td><td>Función asociada a la tarea que se ejecutará. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="ab855909561fe5849851161bbc3bda199" name="ab855909561fe5849851161bbc3bda199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab855909561fe5849851161bbc3bda199">&#9670;&#160;</a></span>attempts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte attempts = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable de tipo byte que almacena el número de intentos. </p>
+
+</div>
+</div>
+<a id="aa9fece7b062124080e4b2976f9a8b675" name="aa9fece7b062124080e4b2976f9a8b675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9fece7b062124080e4b2976f9a8b675">&#9670;&#160;</a></span>colPins</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte colPins[<a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a>] = { 32, 34, 36, 38 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable de tipo byte que almacena el arreglo que representan los pines de las columnas del keypad. </p>
+
+</div>
+</div>
+<a id="aefd90f1160eaa105bc910d4d7c46b815" name="aefd90f1160eaa105bc910d4d7c46b815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd90f1160eaa105bc910d4d7c46b815">&#9670;&#160;</a></span>COLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const byte COLS = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion de constantes que representan el número de columnas que tendrá el keypad. </p>
+
+</div>
+</div>
+<a id="a0563e10870312b52f7f25cfddf778db0" name="a0563e10870312b52f7f25cfddf778db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0563e10870312b52f7f25cfddf778db0">&#9670;&#160;</a></span>currentInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090">Input</a> currentInput = <a class="el" href="_sketch_8ino.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">Input::Unknown</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica la entrada actual para la máquina de estados. </p>
+<p>Esta variable se utiliza para determinar la entrada actual que afectará las transiciones en la máquina de estados. Almacena el valor de la entrada actual, que puede ser uno de los valores definidos en la enumeración Input. </p>
+
+</div>
+</div>
+<a id="a8e27f8b906cf9f57c1124234c459792e" name="a8e27f8b906cf9f57c1124234c459792e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e27f8b906cf9f57c1124234c459792e">&#9670;&#160;</a></span>d4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int d4 = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin d4. </p>
+<ul>
+<li><code>d4</code>: Pin de datos. </li>
+</ul>
+
+</div>
+</div>
+<a id="ad52d32e739245fa26d6cb728bbf31dd0" name="ad52d32e739245fa26d6cb728bbf31dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52d32e739245fa26d6cb728bbf31dd0">&#9670;&#160;</a></span>d5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int d5 = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin d5. </p>
+<ul>
+<li><code>d5</code>: Pin de datos. </li>
+</ul>
+
+</div>
+</div>
+<a id="ad1022e721e1fa576ed67afb73831ed70" name="ad1022e721e1fa576ed67afb73831ed70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1022e721e1fa576ed67afb73831ed70">&#9670;&#160;</a></span>d6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int d6 = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin d6. </p>
+<ul>
+<li><code>d6</code>: Pin de datos. </li>
+</ul>
+
+</div>
+</div>
+<a id="a7ce0880460ab9afdbb59e308d6f93e04" name="a7ce0880460ab9afdbb59e308d6f93e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce0880460ab9afdbb59e308d6f93e04">&#9670;&#160;</a></span>d7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int d7 = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin d4. </p>
+<ul>
+<li><code>d7</code>: Pin de datos. </li>
+</ul>
+
+</div>
+</div>
+<a id="a41ca0f2ba69e4a0dc418933afda4ee05" name="a41ca0f2ba69e4a0dc418933afda4ee05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ca0f2ba69e4a0dc418933afda4ee05">&#9670;&#160;</a></span>en</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int en = 11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin en. </p>
+<ul>
+<li><code>en</code>: Pin de habilitacion </li>
+</ul>
+
+</div>
+</div>
+<a id="a0e6c3cc7e8c762ab0ca1fa2296d7bbfe" name="a0e6c3cc7e8c762ab0ca1fa2296d7bbfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6c3cc7e8c762ab0ca1fa2296d7bbfe">&#9670;&#160;</a></span>keypad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Keypad keypad = Keypad(makeKeymap(<a class="el" href="_sketch_8ino.html#a856e873a1d14012d57ddb813c4a1e40a">keys</a>), <a class="el" href="_sketch_8ino.html#a6d6753e0ae098b31e2f84d4024e361cf">rowPins</a>, <a class="el" href="_sketch_8ino.html#aa9fece7b062124080e4b2976f9a8b675">colPins</a>, <a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a>, <a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declaración de un objeto de la clase Keypad. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">makeKeymap(keys)</td><td>Funcion del mapa de teclas basado en el arreglo keys. </td></tr>
+    <tr><td class="paramname">rowPins</td><td>El arreglo rowPins </td></tr>
+    <tr><td class="paramname">colPins</td><td>El arreglo colsPins </td></tr>
+    <tr><td class="paramname">ROWS</td><td>El arreglo ROWS </td></tr>
+    <tr><td class="paramname">COLS</td><td>El arreglo COLS </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a856e873a1d14012d57ddb813c4a1e40a" name="a856e873a1d14012d57ddb813c4a1e40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856e873a1d14012d57ddb813c4a1e40a">&#9670;&#160;</a></span>keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char keys[<a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a>][<a class="el" href="_sketch_8ino.html#aefd90f1160eaa105bc910d4d7c46b815">COLS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  { <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;A&#39;</span> },</div>
+<div class="line">  { <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;B&#39;</span> },</div>
+<div class="line">  { <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;C&#39;</span> },</div>
+<div class="line">  { <span class="charliteral">&#39;*&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;#&#39;</span>, <span class="charliteral">&#39;D&#39;</span> }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Declaracion de los caracteres que representan el teclado para el keypad. </p>
+
+</div>
+</div>
+<a id="a2cd9f0d96c9cd0637798de3baa7aee60" name="a2cd9f0d96c9cd0637798de3baa7aee60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd9f0d96c9cd0637798de3baa7aee60">&#9670;&#160;</a></span>ledPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ledPin = 13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>variable que almacena el pin del sensor ledPin. </p>
+<ul>
+<li><code>ledPin</code>: Pin 13 </li>
+</ul>
+
+</div>
+</div>
+<a id="a0cd6e4144407ce602c4502d071a3583e" name="a0cd6e4144407ce602c4502d071a3583e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd6e4144407ce602c4502d071a3583e">&#9670;&#160;</a></span>numChar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int numChar = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable de timpo numChar inicializada en 0. </p>
+
+</div>
+</div>
+<a id="a3f0a1b00c5b5bc7ec60b5cc784102225" name="a3f0a1b00c5b5bc7ec60b5cc784102225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0a1b00c5b5bc7ec60b5cc784102225">&#9670;&#160;</a></span>password</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char password[4] = &quot;1234&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable que almacena la contraseña. </p>
+
+</div>
+</div>
+<a id="a8450960731db3add8cee227018677825" name="a8450960731db3add8cee227018677825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8450960731db3add8cee227018677825">&#9670;&#160;</a></span>photocellPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int photocellPin = A0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable que almacena el pin del sensor photocellPin. </p>
+<ul>
+<li><code>photocellPin</code>: Pin A0 </li>
+</ul>
+
+</div>
+</div>
+<a id="a6d6753e0ae098b31e2f84d4024e361cf" name="a6d6753e0ae098b31e2f84d4024e361cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6753e0ae098b31e2f84d4024e361cf">&#9670;&#160;</a></span>rowPins</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte rowPins[<a class="el" href="_sketch_8ino.html#a829655a147df70dd4cc94eae40a2204e">ROWS</a>] = { 24, 26, 28, 30 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable de tipo byte que almacena el arreglo que representan los pines de las filas del keypad. </p>
+
+</div>
+</div>
+<a id="a829655a147df70dd4cc94eae40a2204e" name="a829655a147df70dd4cc94eae40a2204e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829655a147df70dd4cc94eae40a2204e">&#9670;&#160;</a></span>ROWS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const byte ROWS = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion de constantes que representan el número de filas que tendrá el keypad. </p>
+
+</div>
+</div>
+<a id="a6e17894d69614d24591844d4d934dd24" name="a6e17894d69614d24591844d4d934dd24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e17894d69614d24591844d4d934dd24">&#9670;&#160;</a></span>rs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int rs = 12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicion del pin rs. </p>
+<ul>
+<li><code>rs</code>: Pin de registro </li>
+</ul>
+
+</div>
+</div>
+<a id="addbbd589497579fd40dd8a91611bc577" name="addbbd589497579fd40dd8a91611bc577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addbbd589497579fd40dd8a91611bc577">&#9670;&#160;</a></span>temp1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char temp1[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable auxiliar temporal. </p>
+
+</div>
+</div>
+<a id="a4f256db0f0781e0dca84fa9e97f4834d" name="a4f256db0f0781e0dca84fa9e97f4834d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f256db0f0781e0dca84fa9e97f4834d">&#9670;&#160;</a></span>TemperaturePin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TemperaturePin = A1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable que almacena el pin de la temperatura. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
